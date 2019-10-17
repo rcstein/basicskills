@@ -6,8 +6,6 @@ Created on Tue Jul 16 13:18:13 2019
 @author: becca
 """
 
-# Classwork 5 (part 1) - Rebecca Stein - rcs8bg
-
 # Linear Search Algorithm Example #
 
 def linearSearch(target, my_list): # Search list for target value
@@ -34,62 +32,3 @@ print(linearSearch("grape", fruit))
 
 print(len(fruit))
      
-            
-## Binary Search Algorith # 
-
-def binarySearch(ordered_list, target):
-    
-        midpoint = int(len(ordered_list) / 2) # Find midpoint of 
-    
-        pos = midpoint
-    
-        searched = [midpoint]
-        
-     
-        while 0 <= pos <= len(ordered_list):
-        
-    
-            if ordered_list[pos] == target:
-                
-                print("Positions searched:" + str(searched))
-            
-                return ordered_list.index(target)
-            
-        
-            elif ordered_list[pos] < target:
-                
-            
-                pos +=1
-                
-                searched.append(pos)
-                
-                if ordered_list[pos] > target:
-                    
-                    break
-            
-            else:
-            
-                pos -= 1
-                
-                searched.append(pos)
-                
-                if ordered_list[pos] < target:
-                    
-                    break
-                
-            
-        print("Positions searched:" + str(searched))
-        
-        return "Target not found"
-    
-    
-# Tests #
-    
-
-print(binarySearch([-1, 4, 5, 11, 13], 4))
-
-print(binarySearch([-1, 4, 5, 11, 13], 9))
-
-print(binarySearch([-5, -2, -1, 4, 5, 11, 13, 14, 17, 18], 3))
-
-print(len([-1, 4, 5, 11, 13]))
